@@ -1,0 +1,210 @@
+@font-face {
+  font-family: inter;
+  src: url(../public/fonts/Inter.ttf) format(".ttf");
+}
+:root {
+  --white: #ffffff;
+  --brown: #ccccc3;
+  --lightBrown: #ccccc379;
+  --panalColor: #1d1d1d;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  font-family: inter;
+}
+.main {
+  background-image: url("../public/image/heroBlurImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100vw;
+}
+.screenLoader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+.location {
+  transform: translateY(50vh);
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.line {
+  position: absolute;
+  bottom: 0px;
+  width: 0%;
+  height: 1vh;
+  background-color: var(--brown);
+}
+/* navbar */
+.navbar {
+  color: var(--brown);
+  width: inherit;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-left {
+  height: inherit;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-left > p {
+  padding-top: 2px;
+  width: 318px;
+  line-height: 1;
+  color: var(--lightBrown);
+}
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  color: var(--brown);
+  width: inherit;
+  height: inherit;
+}
+.navbar-right-Lcontainer {
+  text-align: left;
+}
+.navbar-right-Rcontainer {
+  padding-right: 4px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: right;
+}
+.navbar-right-Lcontainer > p {
+  padding-top: 2px;
+  font-size: 13px;
+  width: 193px;
+  color: var(--lightBrown);
+  font-weight: bold;
+  line-height: 1;
+}
+a {
+  color: var(--lightBrown);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--brown);
+}
+/* circle */
+/* componentArea */
+.circle {
+  width: 10px;
+  height: 10px;
+  margin: 0px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+.componentArea {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: safe;
+  height: initial;
+  padding-left: 0px;
+  padding-right: 4px;
+}
+.headingTile > p {
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: bold;
+}
+.Containerleft {
+  height: inherit;
+  width: 70vh;
+}
+.Containerright {
+  height: inherit;
+  width: 100%;
+}
+.miniContainer > .tile {
+  display: flex;
+  height: 30px;
+  padding-left: 5px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  justify-items: end;
+  color: var(--lightBrown);
+}
+.miniContainer > .tile:hover {
+  color: black;
+  background-color: var(--brown);
+}
+
+.footer {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ccccc3;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+/* bottom Bar */
+.bottombar {
+  position: fixed;
+  bottom: 10px;
+  transform: translateX(45vw);
+  width: initial;
+  border-radius: 65px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #ccccc3b4;
+  backdrop-filter: blur(1px);
+  color: black;
+}
+.bottombar > a {
+  color: black;
+  padding: 15px 15px;
+  cursor: pointer;
+  border-radius: 65px;
+}
+.bottombar > a:hover {
+  background-color: black;
+  color: var(--brown);
+}
+
+.heroText {
+  padding-left: 0px;
+  color: var(--brown);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  width: inherit;
+}
+.heroText > h1 {
+  font-size: 96px;
+  text-align: center;
+  width: 720px;
+  padding-bottom: 10px;
+  line-height: 0.8;
+  font-weight: black;
+}
+.heroText > p{
+  text-align: center;
+  padding-left: 4px;
+  color: var(--lightBrown);
+  width: 30rem;
+}
