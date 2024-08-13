@@ -6,7 +6,6 @@
 
 function gsapAnimation() {
   var timeline = gsap.timeline();
-
   timeline
     .from(".screenLoader", {
       duration: 1,
@@ -29,12 +28,39 @@ function gsapAnimation() {
       y: "-100%",
     })
     .from(".main", {
-      scale: 0,
-      delay: 0.2,
-      duration: 1,
-      opacity: 0,
+      // //   scale: 0,
+      //   delay: 0.2,
+      //   duration: 1,
+      //   opacity: 0,
     });
 }
+
+function openMiniContainer() {
+  var timeline = gsap.timeline();
+  const whatBtn = document.querySelector("#whatBtn");
+  const resumeBtn = document.querySelector("#resumeBtn");
+  const whatContainerBox = document.querySelector(".whatContainerBox");
+  const closeBtn = document.querySelector(".pageOnRightBtn");
+  whatBtn.addEventListener("click", () => {
+    var timeline = gsap.timeline();
+    timeline.to(whatContainerBox, {
+      height: "79vh",
+      display: "flex",
+      opacity: 1,
+      ease: "power2.out",
+    });
+  });
+  closeBtn.addEventListener("click", () => {
+    var timeline = gsap.timeline();
+    timeline.to(whatContainerBox, {
+      height: "0vh",
+      display: "none",
+      opacity: 0,
+      ease: "power2.out",
+    });
+  });
+}
+
 function normalAnimaion() {
   gsap.from("#bulp", {
     autoAlpha: 0.4,
@@ -53,4 +79,5 @@ function countDown() {
 }
 // calling the function
 gsapAnimation();
-normalAnimaion()
+normalAnimaion();
+openMiniContainer();

@@ -30,6 +30,7 @@ body {
 .screenLoader {
   position: fixed;
   width: 100vw;
+  z-index: 1;
   height: 100vh;
   background-color: black;
 }
@@ -175,15 +176,84 @@ a:hover {
 }
 .bottombar > a {
   color: black;
-  padding: 15px 15px;
+
   cursor: pointer;
   border-radius: 65px;
+}
+.bottombar p {
+  padding: 15px 15px;
 }
 .bottombar > a:hover {
   background-color: black;
   color: var(--brown);
 }
+.whatContainerBox {
+  display: none;
 
+  width: 100vw;
+  height: 0vh;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.58);
+  bottom: 0;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(18px);
+  z-index: 999;
+}
+.topContainerBox {
+  width: 96vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: safe;
+}
+.pageOnLeftContent > h1 {
+  font-size: 66px;
+  font-weight: 900;
+  line-height: 1;
+}
+.pageOnLeftContent > p {
+  font-weight: 400;
+  color: #1d1d1d;
+  width: 30vw;
+}
+.pageOnRightBtn {
+  cursor: pointer;
+  width: initial;
+  height: fit-content;
+  padding: 0px;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 100;
+}
+.pageOnRightBtn::before {
+  /* content: "\2715"; */
+  content: "\2715  close";
+  font-size: 16px;
+  font-family: inter;
+  font-weight: bold;
+  color: black;
+}
+
+.stackBox {
+  display: flex;
+  justify-content: space-between;
+  width: 96vw;
+  height: 60vh;
+}
+.stackBox > .stackBoxLeft {
+  width: inherit;
+  height: inherit;
+  background-color: gray;
+}
+.stackBox > .stackBoxRight{
+  width: inherit;
+  height: inherit;
+  background-color: green;
+}
 .heroText {
   padding-left: 0px;
   color: var(--brown);
@@ -192,7 +262,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   height: 40vh;
-  width: inherit;
+  width: initial;
 }
 .heroText > h1 {
   font-size: 96px;
@@ -202,7 +272,7 @@ a:hover {
   line-height: 0.8;
   font-weight: black;
 }
-.heroText > p{
+.heroText > p {
   text-align: center;
   padding-left: 4px;
   color: var(--lightBrown);
