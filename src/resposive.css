@@ -11,7 +11,9 @@
     font-size: 12px;
   }
   .navbar-left {
-    gap: 5px;
+    width: fit-content;
+    padding-top: 8px;
+    gap: 1px;
   }
   .navbar-left > h1 {
     font-size: 15.2px;
@@ -28,7 +30,7 @@
     height: fit-content;
     flex-direction: column;
     font-size: 8px;
-    width: fit-content;
+    width: 100%;
   }
   .navbar-right-Lcontainer {
     text-align: right;
@@ -36,7 +38,10 @@
   }
   .navbar-right-Lcontainer > p {
     font-size: 8px;
-    width: 140px;
+    /* background-color: red; */
+    align-items: last end;
+    text-align: right;
+    width: inherit;
     color: var(--brown);
   }
   .navbar-right-Rcontainer {
@@ -57,7 +62,7 @@
     position: fixed;
     width: 100vw;
     z-index: 1001;
-    height: 97vh;
+    height: 100vh;
     background-color: black;
   }
   .heroText {
