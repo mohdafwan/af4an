@@ -11,10 +11,9 @@
   .main {
     background-image: url("../public/image/heroBlurImage.png");
     width: 100vw;
-    height: 92vh;
+    height: 93vh;
     background-position: center;
   }
-
   .screenLoader {
     position: fixed;
     width: 100vw;
@@ -94,23 +93,65 @@
     font-size: 8px;
   }
   .bottombar {
-    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 100%;
+    font-size: 8px;
   }
+  
+  /* new window */
 
   .whatContainerBox {
     padding: 0px;
     flex-direction: column;
   }
   .topContainerBox {
-    width: inherit;
+    width: 96vw;
     display: flex;
     justify-content: space-between;
     align-items: safe;
+    padding-top: 3rem;
+    padding-left: 6px;
+    padding-right: 0px;
   }
-  .topContainerBox {
-    padding: 0px;
-    background-color: red;
+
+  .pageOnLeftContent h1 {
+    font-size: 30px;
   }
+  .pageOnLeftContent p {
+    width: fit-content;
+  }
+  .pageOnRightBtn {
+    display: flex;
+    justify-content: space-around;
+  }
+  .pageOnRightBtn::before {
+    content: " close";
+    font-size: 11px;
+    font-family: inter;
+    font-weight: bold;
+    color: black;
+  }
+  .stackBox {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
+    height: 60vh;
+  }
+  .stackBox > .stackBoxLeft {
+    width: inherit;
+    height: inherit;
+    background-color: gray;
+  }
+  .stackBox > .stackBoxRight {
+    width: inherit;
+    height: inherit;
+    background-color: green;
+  }
+  /*End new window */
 }
 @media only screen and (max-width: 900px) {
 }

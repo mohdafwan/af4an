@@ -18,7 +18,7 @@ html {
 body {
   background-color: black;
   font-family: inter;
-  overflow: hidden; 
+  overflow: hidden;
 }
 /* Cursor */
 .cursor {
@@ -182,7 +182,8 @@ a:hover {
 .bottombar {
   position: fixed;
   bottom: 10px;
-  transform: translateX(45vw);
+  left: 50%;
+  transform: translateX(-50%);
   width: initial;
   border-radius: 65px;
   display: flex;
@@ -280,7 +281,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 .heroText > h1 {
   font-size: 96px;
