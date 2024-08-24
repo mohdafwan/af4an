@@ -1,9 +1,3 @@
-// $(".main").ripples({
-//   resolution: 225,
-//   dropRadius: 20,
-//   perturbance: 0.1,
-// });
-
 function gsapAnimation() {
   var timeline = gsap.timeline();
   timeline
@@ -12,11 +6,11 @@ function gsapAnimation() {
       delay: 0,
       onStart: countDown,
       onComplete: () => {
-        console.log("Done");
+        console.log("HI I AM ALWAYS OPEN TO WORK");
       },
     })
     .to(".line", {
-      delay: 2.3,
+      delay: 4.3,
       opacity: 0,
     })
     .to(".location", {
@@ -75,9 +69,39 @@ function countDown() {
       count++;
       incrementContainer.style.width = `${count}%`;
     }
-  }, 21);
+  }, 41);
+}
+
+function customCursor() {
+  const cursor = document.querySelector(".cursor");
+  document.addEventListener("mousemove", (e) => {
+    gsap.to(cursor, {
+      x: e.clientX - cursor.offsetWidth / 2,
+      y: e.clientY - cursor.offsetHeight / 2,
+      ease: "power2.out",
+      duration: 0.3,
+    });
+
+    gsap.to(cursor, {
+      opacity: 1,
+      duration: 0.3,
+    });
+  });
+  document.addEventListener("mouseleave", () => {
+    gsap.to(cursor, {
+      opacity: 0,
+      duration: 0.3,
+    });
+  });
+  document.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      opacity: 1,
+      duration: 0.3,
+    });
+  });
 }
 // calling the function
 gsapAnimation();
 normalAnimaion();
 openMiniContainer();
+customCursor();

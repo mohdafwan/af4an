@@ -1,0 +1,69 @@
+/* Mobile (up to 600px) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: black;
+    font-family: inter;
+    overflow: hidden;
+  }
+  /* Navbar */
+  .navbar {
+    padding-top: 5px;
+    font-size: 12px;
+  }
+  .navbar-left {
+    gap: 5px;
+  }
+  .navbar-left > h1 {
+    font-size: 15.2px;
+    width: 222px;
+  }
+  .navbar-left > p {
+    font-size: 11px;
+    width: 230px;
+    font-weight: normal;
+    height: fit-content;
+  }
+  .navbar-right {
+    gap: 4px;
+    height: fit-content;
+    flex-direction: column;
+    font-size: 8px;
+    width: fit-content;
+  }
+  .navbar-right-Lcontainer {
+    text-align: right;
+    font-size: 8px;
+  }
+  .navbar-right-Lcontainer > p {
+    font-size: 8px;
+    width: 140px;
+    color: var(--brown);
+  }
+  .navbar-right-Rcontainer {
+    gap: 1px;
+  }
+  /* End Navbar */
+  .cursor {
+    display: none;
+  }
+  .main {
+    background-image: url("../public/image/heroBlurImage.png");
+    width: 100vw;
+    background-position: center;
+  }
+
+  .heroText {
+    display: none;
+  }
+  .componentArea {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .bottombar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+}
