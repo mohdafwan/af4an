@@ -17,7 +17,7 @@ html {
 }
 body {
   background-color: black;
-  font-family: inter;
+  font-family: inter, sans-serif;
   overflow: hidden;
 }
 /* Cursor */

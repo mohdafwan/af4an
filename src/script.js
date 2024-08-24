@@ -10,7 +10,7 @@ function gsapAnimation() {
       },
     })
     .to(".line", {
-      delay: 4.3,
+      delay: 1.3,
       opacity: 0,
     })
     .to(".location", {
@@ -69,7 +69,7 @@ function countDown() {
       count++;
       incrementContainer.style.width = `${count}%`;
     }
-  }, 41);
+  }, 21);
 }
 
 function customCursor() {
