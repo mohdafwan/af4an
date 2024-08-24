@@ -49,10 +49,17 @@
   .main {
     background-image: url("../public/image/heroBlurImage.png");
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background-position: center;
   }
 
+  .screenLoader {
+    position: fixed;
+    width: 100vw;
+    z-index: 1001;
+    height: 90vh;
+    background-color: black;
+  }
   .heroText {
     display: none;
   }
