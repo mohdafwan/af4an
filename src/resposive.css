@@ -5,6 +5,23 @@
     font-family: inter;
     overflow: hidden;
   }
+  .cursor {
+    display: none;
+  }
+  .main {
+    background-image: url("../public/image/heroBlurImage.png");
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+  }
+
+  .screenLoader {
+    position: fixed;
+    width: 100vw;
+    z-index: 1001;
+    height: 100vh;
+    background-color: black;
+  }
   /* Navbar */
   .navbar {
     padding-top: 5px;
@@ -48,31 +65,33 @@
     gap: 1px;
   }
   /* End Navbar */
-  .cursor {
-    display: none;
+  /* heroText */
+  .heroText h1 {
+    font-size: 60px;
+    width: initial;
   }
-  .main {
-    background-image: url("../public/image/heroBlurImage.png");
-    width: 100vw;
-    height: 100vh;
-    background-position: center;
+  /* EndheroText */
+  /* ComponentArea */
+  .componentArea {
+    font-size: 11px;
+    padding-bottom: 12px;
+    flex-direction: column;
+  }
+  .showOff {
+    display: none;
   }
 
-  .screenLoader {
-    position: fixed;
-    width: 100vw;
-    z-index: 1001;
-    height: 100vh;
-    background-color: black;
+  .Containerleft {
+    width: inherit;
   }
-  .heroText {
-    display: none;
+  .headingTile {
+    padding-left: 4px;
+    width: 100px;
   }
-  .componentArea {
-    display: none;
-  }
+  /* EndComponentArea */
   .footer {
-    display: none;
+    display: flex;
+    font-size: 8px;
   }
   .bottombar {
     display: none;

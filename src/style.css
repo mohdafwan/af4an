@@ -280,8 +280,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 40vh;
-  width: initial;
+
 }
 .heroText > h1 {
   font-size: 96px;
