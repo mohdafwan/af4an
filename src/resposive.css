@@ -97,11 +97,9 @@
     transform: translateX(-50%);
     width: auto;
     max-width: 100%;
-    font-size: 8px;
+    font-size: 9px;
   }
-  
   /* new window */
-
   .whatContainerBox {
     padding: 0px;
     flex-direction: column;
