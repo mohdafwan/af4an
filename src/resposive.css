@@ -11,7 +11,7 @@
   .main {
     background-image: url("../public/image/heroBlurImage.png");
     width: 100vw;
-    height: 91vh;
+    height: 95vh;
     background-position: center;
   }
 
@@ -95,6 +95,21 @@
   }
   .bottombar {
     bottom: 30px;
+  }
+
+  .whatContainerBox {
+    padding: 0px;
+    flex-direction: column;
+  }
+  .topContainerBox {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: safe;
+  }
+  .topContainerBox {
+    padding: 0px;
+    background-color: red;
   }
 }
 @media only screen and (max-width: 900px) {
