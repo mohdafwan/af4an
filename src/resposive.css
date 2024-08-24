@@ -79,7 +79,6 @@
   .showOff {
     display: none;
   }
-
   .Containerleft {
     width: inherit;
   }
@@ -91,6 +90,7 @@
   .footer {
     display: flex;
     font-size: 8px;
+    padding-bottom: 10px;
   }
   .bottombar {
     left: 50%;
@@ -142,14 +142,10 @@
   .stackBox > .stackBoxLeft {
     width: inherit;
     height: inherit;
-    background-color: gray;
   }
   .stackBox > .stackBoxRight {
     width: inherit;
     height: inherit;
-    background-color: green;
   }
   /*End new window */
-}
-@media only screen and (max-width: 900px) {
 }
