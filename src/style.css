@@ -229,13 +229,15 @@ a:hover {
 }
 .pageOnLeftContent > h1 {
   font-size: 66px;
-  font-weight: 900;
+  font-weight: bold;
   line-height: 1;
 }
 .pageOnLeftContent > p {
-  font-weight: 400;
+  padding-top: 5px;
+  font-weight: bold;
   color: #1d1d1d;
-  width: 30vw;
+  font-weight: 400;
+  width: 400px;
 }
 .pageOnRightBtn {
   cursor: pointer;
@@ -263,17 +265,62 @@ a:hover {
   justify-content: space-between;
   width: 96vw;
   height: 60vh;
+  color: var(--brown);
+  gap: 10px;
 }
 .stackBox > .stackBoxLeft {
   width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: inherit;
-  /* background-color: gray; */
+  border-radius: 16px;
+  background-color: var(--panalColor);
 }
 .stackBox > .stackBoxRight {
+  justify-content: space-around;
   width: inherit;
+  display: flex;
+  flex-direction: column;
   height: inherit;
-  /* background-color: green; */
+  border-radius: 16px;
+  background-color: var(--panalColor);
 }
+.stackBoxRight > div h1 {
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.stackBoxLeft > div h1 {
+  padding-bottom: 10px;
+  font-size: 40px;
+  padding-left: 20px;
+}
+.stackBoxRight > div p {
+  padding-left: 20px;
+  font-size: 14px;
+  width: 608px;
+}
+.stackBoxLeft > div p {
+  font-size: 14px;
+  width: 608px;
+  padding-left: 20px;
+}
+.stackBoxLeft > h5 {
+  padding-left: 20px;
+  font-size: 10px;
+}
+.stackBoxRight > h5 {
+  padding-left: 20px;
+  font-size: 10px;
+}
+.stackBoxLeft > h5 > span {
+  padding: 0px 10px;
+}
+.stackBoxRight > h5 > span {
+  padding: 0px 10px;
+}
+
 .heroText {
   padding-left: 0px;
   color: var(--brown);
