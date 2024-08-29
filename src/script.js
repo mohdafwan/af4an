@@ -1,3 +1,4 @@
+#!/src/script.js {GSAP, TIMER AND MORE}
 function gsapAnimation() {
   var timeline = gsap.timeline();
   timeline
