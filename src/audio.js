@@ -1,3 +1,4 @@
+#!/src/audio.js {AUDIO}
 try {
   const audio = new Audio("../public/button2.mp3");
   const tile = document.querySelectorAll(".tile");
