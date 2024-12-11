@@ -1,25 +1,32 @@
 @font-face {
   font-family: inter;
   src: url(../public/fonts/Inter.ttf) format(".ttf");
+  font-style: normal;
 }
+
 :root {
   --white: #ffffff;
   --brown: #ccccc3;
   --lightBrown: #ccccc379;
   --panalColor: #1d1d1d;
 }
+
 * {
   padding: 0;
   margin: 0;
 }
+
 html {
   font-size: 11.4px;
+  font-family: inter, sans-serif;
 }
+
 body {
   background-color: black;
   font-family: inter, sans-serif;
   overflow: hidden;
 }
+
 /* Cursor */
 .cursor {
   width: 10px;
@@ -32,6 +39,7 @@ body {
   pointer-events: none;
   mix-blend-mode: difference;
 }
+
 .main {
   background-image: url("../public/image/heroBlurImage.png");
   background-repeat: no-repeat;
@@ -42,6 +50,7 @@ body {
   flex-direction: column;
   width: 100vw;
 }
+
 .screenLoader {
   position: fixed;
   width: 100vw;
@@ -49,6 +58,7 @@ body {
   height: 100vh;
   background-color: black;
 }
+
 .location {
   transform: translateY(50vh);
   color: var(--brown);
@@ -56,6 +66,7 @@ body {
   font-weight: bold;
   text-align: center;
 }
+
 .line {
   position: absolute;
   bottom: 0px;
@@ -63,6 +74,7 @@ body {
   height: 1vh;
   background-color: var(--brown);
 }
+
 /* navbar */
 .navbar {
   color: var(--brown);
@@ -71,18 +83,21 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .navbar-left {
   height: inherit;
   width: 40vw;
   display: flex;
   flex-direction: column;
 }
-.navbar-left > p {
+
+.navbar-left>p {
   padding-top: 2px;
   width: 318px;
   line-height: 1;
   color: var(--lightBrown);
 }
+
 .navbar-right {
   display: flex;
   justify-content: space-between;
@@ -90,10 +105,12 @@ body {
   width: inherit;
   height: inherit;
 }
+
 .navbar-right-Lcontainer {
   font-size: 10px;
   text-align: left;
 }
+
 .navbar-right-Rcontainer {
   padding-right: 4px;
   display: flex;
@@ -104,7 +121,8 @@ body {
   flex-direction: column;
   text-align: right;
 }
-.navbar-right-Lcontainer > p {
+
+.navbar-right-Lcontainer>p {
   padding-top: 2px;
   font-size: 12px;
   width: 180px;
@@ -112,13 +130,16 @@ body {
   font-weight: bold;
   line-height: 1;
 }
+
 a {
   color: var(--lightBrown);
   text-decoration: none;
 }
+
 a:hover {
   color: var(--brown);
 }
+
 /* circle */
 /* componentArea */
 .circle {
@@ -128,6 +149,7 @@ a:hover {
   margin-left: 5px;
   border-radius: 10px;
 }
+
 .componentArea {
   padding-top: 0px;
   padding-bottom: 30px;
@@ -139,20 +161,24 @@ a:hover {
   padding-left: 0px;
   padding-right: 4px;
 }
-.headingTile > p {
+
+.headingTile>p {
   color: var(--brown);
   font-size: 14px;
   font-weight: bold;
 }
+
 .Containerleft {
   height: inherit;
   width: 70vh;
 }
+
 .Containerright {
   height: inherit;
   width: 100%;
 }
-.miniContainer > .tile {
+
+.miniContainer>.tile {
   display: flex;
   height: 30px;
   padding-left: 5px;
@@ -160,10 +186,10 @@ a:hover {
   align-items: center;
   cursor: pointer;
   font-weight: 700;
-  justify-items: end;
   color: var(--lightBrown);
 }
-.miniContainer > .tile:hover {
+
+.miniContainer>.tile:hover {
   color: black;
   background-color: var(--brown);
 }
@@ -178,6 +204,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
+
 /* bottom Bar */
 .bottombar {
   position: fixed;
@@ -194,19 +221,23 @@ a:hover {
   backdrop-filter: blur(1px);
   color: black;
 }
-.bottombar > a {
+
+.bottombar>a {
   color: black;
 
   cursor: pointer;
   border-radius: 65px;
 }
+
 .bottombar p {
   padding: 15px 15px;
 }
-.bottombar > a:hover {
+
+.bottombar>a:hover {
   background-color: black;
   color: var(--brown);
 }
+
 .whatContainerBox {
   display: none;
 
@@ -221,24 +252,28 @@ a:hover {
   backdrop-filter: blur(18px);
   z-index: 999;
 }
+
 .topContainerBox {
   width: 96vw;
   display: flex;
   justify-content: space-between;
   align-items: safe;
 }
-.pageOnLeftContent > h1 {
+
+.pageOnLeftContent>h1 {
   font-size: 66px;
   font-weight: bold;
   line-height: 1;
 }
-.pageOnLeftContent > p {
+
+.pageOnLeftContent>p {
   padding-top: 5px;
   font-weight: bold;
   color: #1d1d1d;
   font-weight: 400;
   width: 400px;
 }
+
 .pageOnRightBtn {
   cursor: pointer;
   width: initial;
@@ -251,6 +286,7 @@ a:hover {
   font-size: 28px;
   font-weight: 100;
 }
+
 .pageOnRightBtn::before {
   /* content: "\2715"; */
   content: "\2715  close";
@@ -268,7 +304,8 @@ a:hover {
   color: var(--brown);
   gap: 10px;
 }
-.stackBox > .stackBoxLeft {
+
+.stackBox>.stackBoxLeft {
   width: inherit;
   display: flex;
   flex-direction: column;
@@ -277,7 +314,8 @@ a:hover {
   border-radius: 16px;
   background-color: var(--panalColor);
 }
-.stackBox > .stackBoxRight {
+
+.stackBox>.stackBoxRight {
   justify-content: space-around;
   width: inherit;
   display: flex;
@@ -286,38 +324,46 @@ a:hover {
   border-radius: 16px;
   background-color: var(--panalColor);
 }
-.stackBoxRight > div h1 {
+
+.stackBoxRight>div h1 {
   font-size: 40px;
   padding-bottom: 10px;
   padding-left: 20px;
 }
-.stackBoxLeft > div h1 {
+
+.stackBoxLeft>div h1 {
   padding-bottom: 10px;
   font-size: 40px;
   padding-left: 20px;
 }
-.stackBoxRight > div p {
+
+.stackBoxRight>div p {
   padding-left: 20px;
   font-size: 14px;
   width: 608px;
 }
-.stackBoxLeft > div p {
+
+.stackBoxLeft>div p {
   font-size: 14px;
   width: 608px;
   padding-left: 20px;
 }
-.stackBoxLeft > h5 {
+
+.stackBoxLeft>h5 {
   padding-left: 20px;
   font-size: 10px;
 }
-.stackBoxRight > h5 {
+
+.stackBoxRight>h5 {
   padding-left: 20px;
   font-size: 10px;
 }
-.stackBoxLeft > h5 > span {
+
+.stackBoxLeft>h5>span {
   padding: 0px 10px;
 }
-.stackBoxRight > h5 > span {
+
+.stackBoxRight>h5>span {
   padding: 0px 10px;
 }
 
@@ -329,7 +375,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
 }
-.heroText > h1 {
+
+.heroText>h1 {
   font-size: 96px;
   text-align: center;
   width: 720px;
@@ -337,7 +384,8 @@ a:hover {
   line-height: 0.8;
   font-weight: black;
 }
-.heroText > p {
+
+.heroText>p {
   text-align: center;
   padding-left: 4px;
   color: var(--lightBrown);

@@ -101,8 +101,37 @@ function customCursor() {
     });
   });
 }
+
+function openLink() {
+  const openLine = document.querySelector(".openLine");
+  const cursor = document.querySelector(".cursor");
+
+  openLine.addEventListener("click", () => {
+    window.open("https://apps.apple.com/kw/developer/fahad-al-saleh/id1718536234", "_blank");
+  });
+
+  openLine.addEventListener("mouseenter", () => {
+    cursor.innerHTML = "↗";
+    cursor.style.fontSize = "1px";
+    cursor.style.color = "red";
+    gsap.to(cursor, {
+      scale: 2,
+      backgroundColor: "white",
+      duration: 0.3,
+    });
+  });
+
+  openLine.addEventListener("mouseleave", () => {
+    cursor.innerHTML = "";
+    gsap.to(cursor, {
+      scale: 1,
+      duration: 0.3,
+    });
+  });
+}
 // calling the function
 gsapAnimation();
 normalAnimaion();
 openMiniContainer();
 customCursor();
+openLink(); 
