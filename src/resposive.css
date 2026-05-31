@@ -1,192 +1,142 @@
-/* Mobile (up to 600px) */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: black;
-    font-family: inter;
-    overflow: hidden;
+/* ============ Tablet ============ */
+@media (max-width: 900px) {
+  .project {
+    grid-template-columns: 1fr auto;
   }
-  .cursor {
+
+  .project-meta {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============ Mobile ============ */
+@media (max-width: 680px) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor,
+  .cursor-dot {
     display: none;
   }
-  .main {
-    background-image: url("../public/image/heroBlurImage.png");
-    width: 100vw;
-    height: 93vh;
-    background-position: center;
+
+  /* clean text hero on phones — no 3D smudge behind the copy */
+  #bg-canvas {
+    display: none;
   }
-  .screenLoader {
-    position: fixed;
-    width: 100vw;
+
+  .hero {
+    justify-content: flex-start;
+    padding-top: 6.5rem;
+  }
+
+  /* Mobile nav — fullscreen fade overlay */
+  .nav-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1001; /* always above the overlay so it can close */
+  }
+
+  .brand {
+    position: relative;
     z-index: 1001;
-    height: 100%;
-    background-color: black;
   }
-  /* Navbar */
-  .navbar {
-    padding-top: 5px;
-    font-size: 12px;
-  }
-  .navbar-left {
-    width: fit-content;
-    padding-top: 8px;
-    gap: 1px;
-  }
-  .navbar-left > h1 {
-    font-size: 15.2px;
-    width: 222px;
-  }
-  .navbar-left > p {
-    font-size: 11px;
-    width: 230px;
-    font-weight: normal;
-    height: fit-content;
-  }
-  .navbar-right {
-    gap: 4px;
-    height: fit-content;
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
     flex-direction: column;
-    font-size: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: #070707; /* fully opaque — nothing bleeds through */
+    font-size: 1.6rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .topnav.open {
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .topnav.open .nav-links {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .topnav.open .nav-toggle span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .topnav.open .nav-toggle span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  .nav-links a {
+    color: var(--text);
+  }
+
+  .nav-cta {
+    border: none;
+    padding: 0;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-actions {
     width: 100%;
   }
-  .navbar-right-Lcontainer {
-    text-align: right;
-    font-size: 8px;
+
+  .btn {
+    flex: 1;
+    justify-content: center;
   }
-  .navbar-right-Lcontainer > p {
-    font-size: 8px;
-    /* background-color: red; */
-    align-items: last end;
-    text-align: right;
-    width: inherit;
-    color: var(--brown);
-  }
-  .navbar-right-Rcontainer {
-    gap: 1px;
-  }
-  /* End Navbar */
-  /* heroText */
-  .heroText h1 {
-    font-size: 60px;
-    width: initial;
-  }
-  /* EndheroText */
-  /* ComponentArea */
-  .componentArea {
-    font-size: 11px;
-    padding-bottom: 12px;
-    flex-direction: column;
-  }
-  .showOff {
+
+  .scroll-cue {
     display: none;
   }
-  .Containerleft {
-    width: inherit;
+
+  /* Sections */
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
-  .headingTile {
-    padding-left: 4px;
-    width: 100px;
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
-  /* EndComponentArea */
+
   .footer {
-    display: flex;
-    font-size: 8px;
-    padding-bottom: 10px;
-  }
-  .bottombar {
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: 100%;
-    font-size: 9px;
-  }
-  /* new window */
-  .whatContainerBox {
-    padding: 0px;
     flex-direction: column;
-  }
-  .topContainerBox {
-    width: 96vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: safe;
-    padding-top: 3rem;
-    padding-left: 6px;
-    padding-right: 0px;
+    align-items: flex-start;
+    gap: 0.6rem;
   }
 
-  .pageOnLeftContent h1 {
-    font-size: 30px;
+  .project-meta {
+    font-size: 0.75rem;
   }
-  .pageOnLeftContent p {
-    width: fit-content;
-  }
-  .pageOnRightBtn {
-    display: flex;
-    justify-content: space-around;
-  }
-  .pageOnRightBtn::before {
-    content: " close";
-    font-size: 11px;
-    font-family: inter;
-    font-weight: bold;
-    color: black;
-  }
-  .stackBox {
-    padding: 8px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: inherit;
-    height: 60vh;
-    padding-bottom: 22px;
+}
+
+/* ============ Small phones ============ */
+@media (max-width: 400px) {
+  .loader-meta {
+    font-size: 0.6rem;
   }
 
-  /*End new window */
-  .stackBox > .stackBoxLeft {
-    width: 96%;
-    height: inherit;
-    border-radius: 16px;
-    background-color: var(--panalColor);
-  }
-  .stackBox > .stackBoxRight {
-    width: 96%;
-    height: inherit;
-    border-radius: 16px;
-    background-color: var(--panalColor);
-  }
-  .stackBoxRight > div h1 {
-    font-size: 30px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-  }
-  .stackBoxLeft > div h1 {
-    padding-bottom: 10px;
-    font-size: 30px;
-    padding-left: 10px;
-  }
-  .stackBoxRight > div p {
-    padding-left: 10px;
-    font-size: 12px;
-    width: fit-content;
-  }
-  .stackBoxLeft > div p {
-    font-size: 12px;
-    width: fit-content;
-    padding-left: 10px;
-  }
-  .stackBoxLeft > h5 {
-    padding-left: 20px;
-    font-size: 10px;
-  }
-  .stackBoxRight > h5 {
-    padding-left: 20px;
-    font-size: 10px;
-  }
-  .stackBoxLeft > h5 > span {
-    padding: 0px 10px;
-  }
-  .stackBoxRight > h5 > span {
-    padding: 0px 10px;
+  .hero-eyebrow {
+    font-size: 0.72rem;
   }
 }
