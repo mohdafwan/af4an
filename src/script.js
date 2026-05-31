@@ -258,8 +258,10 @@
 
   /* ---------------- Year ---------------- */
   function setYear() {
-    const el = document.getElementById("year");
-    if (el) el.textContent = new Date().getFullYear();
+    const y = new Date().getFullYear();
+    document.querySelectorAll(".js-year").forEach((el) => {
+      el.textContent = y;
+    });
   }
 
   /* ---------------- Init ---------------- */
