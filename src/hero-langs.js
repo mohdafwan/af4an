@@ -32,6 +32,15 @@
     // Keep the title static for visitors who prefer reduced motion.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    // On native / mobile screens (small or touch), don't rotate — just show
+    // "SOFTWARE DEVELOPER".
+    if (
+      window.matchMedia("(max-width: 768px)").matches ||
+      window.matchMedia("(pointer: coarse)").matches
+    ) {
+      return;
+    }
+
     const FADE_MS = 450;
     const HOLD_MS = 2600;
     let i = 0;
