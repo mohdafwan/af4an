@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Mohd Afwan — App & Web Developer based in Mumbai, India. Crafting fast, accessible cross-platform apps with Flutter and bespoke web experiences." />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#0c3a31" />
   <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon" />
   <title>Mohd Afwan — App &amp; Web Developer</title>
 
@@ -17,6 +17,9 @@
 
   <link rel="stylesheet" href="./src/style.css" />
   <link rel="stylesheet" href="./src/resposive.css" />
+
+  <!-- Lenis smooth scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
 
   <!-- Brand icons -->
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
@@ -82,6 +85,7 @@
       <a href="#about" class="sound">What I Do</a>
       <a href="#expertise" class="sound">Expertise</a>
       <a href="#work" class="sound">Work</a>
+      <a href="#projects" class="sound">Projects</a>
       <a href="#careers" class="sound">Careers</a>
       <a href="#contact" class="sound">Contact</a>
       <a href="./public/Afwan_Shaikh_resume.pdf" target="_blank" rel="noopener" class="sound nav-cta">Résumé ↗</a>
@@ -326,10 +330,30 @@
       </ul>
     </section>
 
+    <!-- PERSONAL PROJECTS -->
+    <section class="section work" id="projects">
+      <div class="section-head reveal">
+        <p class="section-index">04</p>
+        <h2 class="section-title">Personal Projects</h2>
+        <p class="section-lead">Products I'm building on my own.</p>
+      </div>
+
+      <ul class="project-list">
+        <li class="project tile" data-link="https://www.trydocsnap.com/">
+          <div class="project-main">
+            <span class="project-no">/01</span>
+            <h3 class="project-name">DocSnap</h3>
+          </div>
+          <p class="project-meta">Web · Founder</p>
+          <span class="project-arrow">↗</span>
+        </li>
+      </ul>
+    </section>
+
     <!-- CAREERS -->
     <section class="section careers" id="careers">
       <div class="section-head reveal">
-        <p class="section-index">04</p>
+        <p class="section-index">05</p>
         <h2 class="section-title">Careers</h2>
         <p class="section-lead">Where I've spent my time.</p>
       </div>
@@ -378,10 +402,10 @@
     <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="contact-inner reveal">
-        <p class="section-index">05</p>
+        <p class="section-index">06</p>
         <h2 class="contact-title">Let's build<br />something great.</h2>
-        <a href="mailto:afwanshaikh606@gmail.com" class="contact-mail sound">
-          afwanshaikh606@gmail.com ↗
+        <a href="mailto:developer@af3an.tech" class="contact-mail sound">
+          developer@af3an.tech ↗
         </a>
         <div class="contact-grid">
           <div>
@@ -417,10 +441,13 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
   <script type="module" src="./src/three-bg.js"></script>
   <script src="./src/script.js"></script>
   <script src="./src/audio.js"></script>
   <script src="./src/music.js"></script>
+  <script src="./src/hero-langs.js"></script>
+  <script src="./src/smooth-scroll.js"></script>
 </body>
 
 </html>
